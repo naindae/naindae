@@ -18,3 +18,9 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
+      - run: mkdir -p C:\Users\wkd58\Desktop\BoB\공통교육\과제\보안제품개발\GitWorkflow
+      - run: python -c "import sys; print(sys.version)" > C:\Users\wkd58\Desktop\BoB\공통교육\과제\보안제품개발\GitWorkflow\result.txt
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: C:\Users\wkd58\Desktop\BoB\공통교육\과제\보안제품개발\GitWorkflow\result.txt
