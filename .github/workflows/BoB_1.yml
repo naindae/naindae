@@ -20,4 +20,5 @@ jobs:
         run: python -c "import sys; print(sys.version)" > ${{ matrix.python-version }}.txt
       - uses: actions/upload-artifact@v3
         with:
-          name: ${{ matrix.python-version }}.txt
+          name: python_version(zip)
+          path: ${{ matrix.python-version }}.txt
