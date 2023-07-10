@@ -19,8 +19,8 @@ jobs:
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
       - run: mkdir -p C:\Users\wkd58\Desktop\BoB\GitWorkflow
-      - run: python -c "import sys; print(sys.version)" > C:\Users\wkd58\Desktop\BoB\GitWorkflow\result.txt
+      - run: python -c "import sys; print(sys.version)"
       - uses: actions/upload-artifact@v3
         with:
-          name: my-artifact
-          path: C:\Users\wkd58\Desktop\BoB\GitWorkflow\result.txt
+          name: python_version_artifact
+          path: python -c "import sys; print(sys.version)"
