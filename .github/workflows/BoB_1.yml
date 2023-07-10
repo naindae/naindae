@@ -17,8 +17,8 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
+        run: python -c "import sys; print(sys.version)" > result.txt
       - uses: actions/upload-artifact@v3
         with:
           name: python_version_artifact
-          path: python -c "import sys; print(sys.version)" > result.txt
+          path: result.txt
